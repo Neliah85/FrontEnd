@@ -22,7 +22,8 @@ function Login() {
                     let Token=user.token
                     console.log(user)
                     console.log(Token)
-                    sessionStorage("token",Token); 
+                    sessionStorage.setItem("token",Token); 
+                    document.getElementById("userPhoto").src= "http://kepek.neliah.nhely.hu/"+user.ProfilePicturePath;
 
                     alert("Sikeres bejelntkezés!")
                 }
