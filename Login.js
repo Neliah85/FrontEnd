@@ -1,10 +1,10 @@
 function Login() {
-    let tmpSalt=GenerateSalt(64);
-    console.log(tmpSalt);
+    //let tmpSalt=GenerateSalt(64);
+    //console.log(tmpSalt);
     let loginName = document.getElementById("LoginName").value;
     let password = document.getElementById("Password").value;
     //console.log(loginName+" "+password)
-    let saltUrl = "http://localhost:5000/api/Login/SaltRequest/" + loginName;
+    let saltUrl = "http://localhost:5000/api/Login/GetSalt/" + loginName;
     axios.post(saltUrl).then((response) => {
         let salt = response.data;
         console.log(salt);
@@ -20,11 +20,10 @@ function Login() {
                 {
                     let user=response.data;
                     let Token=user.token
-                    console.log(user)
-                    console.log(Token)
-                    sessionStorage.setItem("token",Token); 
-                    document.getElementById("userPhoto").src= "http://kepek.neliah.nhely.hu/"+user.ProfilePicturePath;
-
+                    console.log(user);
+                    console.log(Token);
+                    sessionStorage.setItem("token",Token);
+                    document.getElementById("userPhoto").src="http://images.balazska.nhely.hu/"+user.profilePicturePath;
                     alert("Sikeres bejelntkezés!")
                 }
             else{

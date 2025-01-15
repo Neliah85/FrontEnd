@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -11,21 +12,21 @@
 <body>
     <form action="">
         <input type="number" id="id" value="0" maxlength="11" hidden>
-        <label>Felhasználónév</label>
+        <label>Felhasznaló neve</label>
         <input type="text" id="felhasznaloNev">
         <label>Jelszó</label>
         <input type="password" id="jelszo">
         <label>Teljes név</label>
-        <input type="text" id="TeljesNev">
+        <input type="text" id="teljesNev">
         <input type="text" id="salt" hidden>
         <input type="text" id="hash" hidden>
-        <label>E-mail cím</label>
+        <label>E-mail</label>
         <input type="email" id="email">
-        <input type="number" id="jogosultsag" value="0" min="0" max="9" hidden>
-        <input type="number" id="aktiv" value="0" min="0" max="1"hidden>
+        <input type="number" id="jogosultsag" value="1" min="0" max="9" hidden>
+        <input type="number" id="aktiv" value="0" min="0" max="1" hidden>
         <input type="date" id="regisztracioDatuma" hidden>
-        <input type="text" id="profilKepUtvonal" value="default.jpg" disabled>
-        <button type="button" value="regisztracio" onclick="Regisztracio()">Regisztráció</button>
+        <input type="text" id="profilKepUtvonal" value="default.jpg" hidden>
+        <button type="button" id="regisztracio" onclick="Regisztracio()">Regisztráció</button>
     </form>
 </body>
 </html>
