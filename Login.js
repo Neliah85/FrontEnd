@@ -18,7 +18,11 @@ function Login() {
         axios.post(loginUrl,body).then((response) =>{
             if (response.status==200)
                 {
-                    console.log(response.data)
+                    let user=response.data;
+                    let Token=user.token
+                    console.log(user)
+                    console.log(Token)
+                    
                     alert("Sikeres bejelntkezés!")
                 }
             else{
