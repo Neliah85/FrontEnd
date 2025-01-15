@@ -1,9 +1,20 @@
-let body="id": 0,
-  "felhasznaloNev": "string",
-  "teljesNev": "string",
-  "salt": "string",
-  "hash": "string",
-  "email": "string",
-  "aktiv": 0,
-  "regisztracioDatuma": "2025-01-15T16:26:36.196Z",
-  "profilKepUtvonal": "string",
+function Regisztracio()
+{
+    let salt=GenerateSalt(64)
+    let body={
+
+    "id": document.getElementById("id").value,
+      "felhasznaloNev": document.getElementById("felhasznaloNev").value,
+      "teljesNev": document.getElementById("teljesNev").value,
+      "salt": salt,
+      "hash": sha256(sha256(document.getElementById("jelszo").value+salt)),
+      "email": document.getElementById("email").value,
+      "jogosultsag": document.getElementById("jogosultsag").value,
+      "aktiv": document.getElementById("aktiv").value,
+      "regisztracioDatuma": document.getElementById("regisztracioDatuma").value,
+      "profilKepUtvonal": document.getElementById("profilKepUtvonal").value,
+    }
+
+}
+
+
