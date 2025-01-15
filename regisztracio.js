@@ -10,7 +10,7 @@ function Regisztracio(){
       "email": document.getElementById("email").value,
       "jogosultsag": document.getElementById("jogosultsag").value,
       "aktiv": document.getElementById("aktiv").value,
-      "regisztracioDatuma": document.getElementById("regisztracioDatuma").value,
+      "regisztracioDatuma": datum.toISOString(),
       "profilKepUtvonal": document.getElementById("profilKepUtvonal").value
     }
     console.log(body);
