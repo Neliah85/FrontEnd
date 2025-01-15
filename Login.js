@@ -22,7 +22,8 @@ function Login() {
                     let Token=user.token
                     console.log(user)
                     console.log(Token)
-                    
+                    sessionStorage("token",Token); 
+
                     alert("Sikeres bejelntkezés!")
                 }
             else{
