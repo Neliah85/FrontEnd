@@ -14,5 +14,12 @@ function Regisztracio(){
       "profilKepUtvonal": document.getElementById("profilKepUtvonal").value
     }
     console.log(body);
+    let url="https://localhost:5000/api/Registry";
+    axios.post(url,body).then((response) => {
+        console.log(response.data);
+    })
+    .catch((error) => {
+        alert (error);
+    });
   }
   
